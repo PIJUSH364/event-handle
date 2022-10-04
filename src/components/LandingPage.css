@@ -1,0 +1,166 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  --colorT: #240d57;
+  --colort2: #8456ec;
+  --colort3: #e87bf8;
+  --Bcolor: #dddddd;
+  --colort4: #fff;
+  --colort5: #4f4f4f;
+  --Hfonts: "Helvetica", Courier, monospace;
+  --mobileFsize1: 16px;
+  --mobileFsize2: 34px;
+  --fontWeight300: 300;
+  --fontWeight700: 700;
+  --remSize0: 0;
+  --remSize1: 1rem;
+  --remSize2: 2rem;
+  --remSize3: 3rem;
+  --remSize4: 4rem;
+  --fullVw: 100vw;
+  --fullVh: 100vh;
+  --fullPercentage: 100%;
+}
+.ipad-pro {
+  display: none;
+}
+.container--landingPage {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: var(--fullVh);
+  padding: var(--remSize3);
+  font-family: var(--Hfonts);
+  background-color: var(--Bcolor);
+}
+.right--landing {
+  margin-right: var(--remSize3);
+}
+.right--landing .highlight--heading .highlight--heading-title {
+  font-weight: bold;
+  font-size: var(--remSize4);
+  line-height: var(--remSize4);
+  text-align: right;
+  color: var(--colorT);
+}
+.right--landing .deatils--about .deatils--about--description {
+  font-weight: lighter;
+  font-size: 1.5rem;
+  line-height: var(--fullPercentage);
+  text-align: right;
+  color: var(--colort5);
+}
+.right--landing .create--event {
+  float: right;
+}
+.right--landing .create--event button {
+  font-weight: bold;
+  font-size: 1.25rem;
+  line-height: var(--fullPercentage);
+  margin-top: var(--remSize2);
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(90deg, var(--colort2) 3.25%, var(--colort3) 100%);
+  padding: var(--remSize1) 1.9em;
+  color: var(--colort4);
+}
+.left--landing figure .svg--event {
+  height: 540px;
+  padding-left: 170px;
+}
+.heading-title-customColor {
+  color: var(--colort2);
+  background: -webkit-linear-gradient(45deg, var(--colort2), var(--colort3));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* responsive design */
+@media (max-width: 800px) {
+  .mac-book {
+    display: none;
+  }
+  .ipad-pro {
+    display: block;
+  }
+  .container--landingPage {
+    display: flex;
+    flex-direction: column-reverse;
+    align-content: center;
+    align-items: center;
+  }
+  .right--landing {
+    margin-right: var(--remSize0);
+  }
+  .right--landing .highlight--heading .highlight--heading-title {
+    text-align: center;
+  }
+  .right--landing .deatils--about {
+    text-align: center;
+    margin: var(--remSize1) 0 var(--mobileFsize2) 0;
+  }
+  .right--landing .deatils--about .deatils--about--description {
+    text-align: center;
+    line-height: var(--remSize2);
+  }
+  .left--landing figure .svg--event {
+    height: 540px;
+    padding-left: var(--remSize0);
+  }
+  .left--landing {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .left--landing button {
+    font-weight: bold;
+    font-size: 1.25rem;
+    line-height: var(--fullPercentage);
+    margin-top: var(--remSize2);
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(90deg, #8456ec 3.25%, #e87bf8 100%);
+    padding: var(--remSize1) 2.3em;
+  }
+}
+@media (max-width: 500px) {
+  .container--landingPage {
+    display: flex;
+    flex-direction: column-reverse;
+    align-content: center;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: var(--remSize0);
+  }
+  .right--landing {
+    margin-right: var(--remSize0);
+    margin-top: -3em;
+  }
+  .right--landing .deatils--about {
+    text-align: center;
+    margin: var(--remSize1) var(--remSize0) -2em 0;
+  }
+  .left--landing figure .svg--event {
+    height: 320px;
+  }
+  .right--landing .highlight--heading .highlight--heading-title {
+    font-weight: var(--fontWeight700);
+    font-size: var(--mobileFsize2);
+    line-height: 41px;
+    text-align: center;
+  }
+  .right--landing .deatils--about .deatils--about--description {
+    font-size: var(--mobileFsize1);
+    line-height: 20px;
+    font-weight: var(--fontWeight300);
+    text-align: center;
+    color: var(--colort5);
+  }
+  .left--landing button {
+    font-size: var(--mobileFsize1);
+    font-weight: var(--fontWeight700);
+    margin-top: var(--remSize2);
+    padding: var(--remSize1);
+  }
+}
